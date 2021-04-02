@@ -1,6 +1,16 @@
-body {
-  width: 100%;
-  background: black;
+.logo {
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+.logo img {
+  width: 50%;
+}
+
+.lieu {
+  background: #9356dc;
 }
 
 /*# sourceMappingURL=style.css.map */
