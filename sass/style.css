@@ -1,3 +1,15 @@
+@font-face {
+  font-family: "roboto_thin";
+  src: url("/typo/Roboto-Thin.ttf") format("truetype");
+}
+@font-face {
+  font-family: "roboto_medium";
+  src: url("/typo/Roboto-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "shrikhand";
+  src: url("/typo/Shrikhand-Regular.ttf") format("truetype");
+}
 .logo {
   width: auto;
   height: auto;
@@ -9,8 +21,76 @@
   width: 50%;
 }
 
+body {
+  font-family: "roboto_thin";
+}
+
 .lieu {
+  font-size: small;
+  font-family: "roboto_thin";
+  text-align: center;
+  padding: 5px;
+  background: #f2eafb;
+}
+
+.presentation {
+  background: #e8f9f5;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+.presentation h1 {
+  font-family: "roboto_medium";
+  font-size: x-large;
+  text-align: center;
+  padding: 0 30px 0px 30px;
+}
+.presentation p {
+  font-family: "roboto_thin";
+  font-size: medium;
+  text-align: center;
+  padding: 0 20px 10px 20px;
+}
+
+btn {
+  background: #ff79da;
+  width: 60%;
+  display: flex;
+  align-self: center;
+  color: white;
+  font-family: "roboto_medium";
+  text-align: center;
+  border-radius: 25px;
+  padding: 15px;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 10px 20px 10px;
+}
+section h2 {
+  font-family: "roboto_medium";
+}
+
+.bouton {
+  display: flex;
+  justify-content: space-evenly;
+  background: #e8f9f5;
+  padding: 25px;
+  border-radius: 20px;
+}
+
+.ring {
+  width: 20px;
+  height: 20px;
+  color: white;
+  border-radius: 50%;
+  font-family: "roboto_medium";
+  display: flex;
+  justify-content: center;
   background: #9356dc;
+  text-align: center;
 }
 
 /*# sourceMappingURL=style.css.map */

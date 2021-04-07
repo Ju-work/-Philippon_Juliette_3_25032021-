@@ -1,0 +1,3 @@
+@mixin lieu {
+  background: $primary lighten($primary, $amount: 1%);
+}
