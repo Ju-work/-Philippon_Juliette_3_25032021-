@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "roboto_thin";
   src: url("/typo/Roboto-Thin.ttf") format("truetype");
@@ -11,6 +12,7 @@
   src: url("/typo/Shrikhand-Regular.ttf") format("truetype");
 }
 .logo {
+  background: white;
   width: auto;
   height: auto;
   display: flex;
@@ -21,16 +23,23 @@
   width: 50%;
 }
 
-body {
-  font-family: "roboto_thin";
-}
-
+/*body {
+  font-family: 'roboto_thin';
+}*/
 .lieu {
-  font-size: small;
-  font-family: "roboto_thin";
+  font-size: large;
+  font-family: "roboto_medium";
+  color: #332f2f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   padding: 5px;
   background: #f2eafb;
+  border-top: 2px solid #9356dc;
+}
+.lieu p {
+  margin-left: 10px;
 }
 
 .presentation {
@@ -52,10 +61,9 @@ body {
   padding: 0 20px 10px 20px;
 }
 
-btn {
+.btn {
   background: #ff79da;
   width: 60%;
-  display: flex;
   align-self: center;
   color: white;
   font-family: "roboto_medium";
@@ -64,26 +72,38 @@ btn {
   padding: 15px;
 }
 
+--commande {
+  padding: 80px;
+}
+
 section {
   display: flex;
   flex-direction: column;
-  padding: 20px 10px 20px 10px;
+  padding: 20px 20px 20px 20px;
 }
 section h2 {
   font-family: "roboto_medium";
+  font-size: x-large;
 }
 
 .bouton {
+  font-family: "roboto_medium";
   display: flex;
   justify-content: space-evenly;
   background: #e8f9f5;
-  padding: 25px;
+  padding: 20px;
   border-radius: 20px;
+  margin-bottom: 20px;
+  box-shadow: 10px 5px 10px #c0bebe;
+}
+.bouton .manual {
+  position: relative;
+  right: 30px;
 }
 
 .ring {
-  width: 20px;
-  height: 20px;
+  width: 22px;
+  height: 22px;
   color: white;
   border-radius: 50%;
   font-family: "roboto_medium";
@@ -91,6 +111,170 @@ section h2 {
   justify-content: center;
   background: #9356dc;
   text-align: center;
+  position: relative;
+  left: -45px;
+}
+.ring span {
+  position: relative;
+  padding: 0;
+  bottom: 1px;
+  font-family: "roboto_medium";
+}
+
+.picto {
+  display: flex;
+}
+.picto i {
+  color: #5a5757;
+  font-size: larger;
+  position: relative;
+  right: 35px;
+}
+.picto :hover i {
+  color: #9356dc;
+}
+
+.restaurant {
+  background: #e8f9f5;
+}
+.restaurant h3 {
+  font-family: "roboto_medium";
+  font-size: x-large;
+}
+.restaurant .card {
+  background: white;
+  height: 250px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  box-shadow: 10px 5px 10px #c0bebe;
+}
+.restaurant img {
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+  border-radius: 20px 20px 0 0;
+  margin-bottom: 5px;
+}
+.restaurant .new_frame {
+  background: #e8f9f5;
+  padding: 3px;
+  color: gray;
+  width: 80px;
+  border-radius: 2px;
+  position: relative;
+  left: 220px;
+  bottom: 230px;
+  text-align: center;
+}
+.restaurant .name_heart {
+  display: flex;
+  justify-content: space-between;
+}
+.restaurant .name_place {
+  padding-left: 20px;
+}
+.restaurant a {
+  text-decoration-line: none;
+  color: black;
+  font-family: "roboto_medium";
+  font-size: large;
+}
+.restaurant p {
+  font-family: "roboto_thin";
+  line-height: 1px;
+}
+.restaurant .heart {
+  padding-right: 20px;
+}
+
+footer {
+  background: #332f2f;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  color: white;
+}
+footer p {
+  font-family: "roboto_medium";
+}
+
+.mini_logo {
+  font-family: "shrikhand";
+  font-size: larger;
+}
+
+.propose {
+  font-family: "roboto_medium";
+  display: flex;
+  align-items: center;
+  margin-bottom: -15px;
+}
+.propose p {
+  padding-left: 20px;
+}
+
+/*propriétés restaurant 1: la palette du gout**************************************/
+.band {
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+}
+
+.banner {
+  width: 100%;
+}
+.banner img {
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+}
+
+.restaurant_meal {
+  background: #e8f9f5;
+  border-radius: 40px 40px 0 0;
+  position: relative;
+  top: -60px;
+  padding: 20px 20px 50px 20px;
+}
+.restaurant_meal .restaurant_name {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "shrikhand";
+}
+.restaurant_meal .restaurant_name i {
+  font-size: x-large;
+}
+.restaurant_meal .meal {
+  font-family: "roboto_thin";
+  padding-bottom: 7px;
+  margin-right: 200px;
+  border-bottom: 2px solid gray;
+  text-transform: uppercase;
+}
+
+.bouton_meal {
+  font-family: "roboto_thin";
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  background: white;
+  padding: 0 10px 0 10px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  box-shadow: 10px 5px 10px #c0bebe;
+}
+.bouton_meal .meal_description {
+  line-height: 10px;
+  font-size: small;
+}
+.bouton_meal .meal_description span {
+  font-family: "roboto_medium";
+  font-size: medium;
+}
+.bouton_meal .price {
+  font-family: "roboto_medium";
+  padding-bottom: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */

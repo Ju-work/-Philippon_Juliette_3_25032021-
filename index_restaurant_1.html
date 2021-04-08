@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="/sass/style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
@@ -29,8 +29,8 @@
         </div>
       </header>
 
-      <section>
-        <div class="restaurant">
+      <section class="restaurant_meal">
+        <div class="restaurant_name">
           <h1>La palette du goût</h1>
           <p><i class="far fa-heart"></i></p>
         </div>
@@ -112,26 +112,26 @@
           <div class="price">23€</div>
         </div>
 
-        <btn class="commander">Commander</btn>
+        <div class="btn">Commander</div>
       </section>
     </main>
 
     <footer>
-      <div class="petit_logo">
-        <img src="images/logo/ohmyfood.png" alt="logo mini" />
-      </div>
+      <div class="mini_logo">ohmyfood</div>
 
-      <div class="proposer">
+      <div class="propose">
         <div class="mini_picto"><i class="fas fa-utensils"></i></div>
         <p>Proposer une restaurant</p>
       </div>
 
-      <div class="partenaire">
+      <div class="propose">
         <div class="mini_picto"><i class="fas fa-hands-helping"></i></div>
         <p>Devenir partenaire</p>
       </div>
-      <p>Mentions légales</p>
-      <p>Contact</p>
+      <div class="other">
+        <p>Mentions légales</p>
+        <p>Contact</p>
+      </div>
     </footer>
   </body>
 </html>
