@@ -3,12 +3,12 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="/sass/style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
     />
-    <title>La palette du goût</title>
+    <title>À la française</title>
   </head>
 
   <body>
@@ -16,9 +16,7 @@
       <header>
         <div class="band">
           <btn class="arrow"> <i class="fas fa-arrow-left"></i> </btn>
-          <div class="logo">
-            <img src="images/logo/ohmyfood.png" alt="Oh my food" />
-          </div>
+          <div class="logo">ohmyfood</div>
         </div>
 
         <div class="banner">
@@ -29,8 +27,8 @@
         </div>
       </header>
 
-      <section>
-        <div class="restaurant">
+      <section class="restaurant_meal">
+        <div class="restaurant_name">
           <h1>À la française</h1>
           <p><i class="far fa-heart"></i></p>
         </div>
@@ -113,26 +111,26 @@
           <div class="price">23€</div>
         </div>
 
-        <btn class="commander">Commander</btn>
+        <div class="btn btn--commande">Commander</div>
       </section>
     </main>
 
     <footer>
-      <div class="petit_logo">
-        <img src="images/logo/ohmyfood.png" alt="logo mini" />
-      </div>
+      <div class="mini_logo">ohmyfood</div>
 
-      <div class="proposer">
+      <div class="propose">
         <div class="mini_picto"><i class="fas fa-utensils"></i></div>
         <p>Proposer une restaurant</p>
       </div>
 
-      <div class="partenaire">
+      <div class="propose">
         <div class="mini_picto"><i class="fas fa-hands-helping"></i></div>
         <p>Devenir partenaire</p>
       </div>
-      <p>Mentions légales</p>
-      <p>Contact</p>
+      <div class="other">
+        <p>Mentions légales</p>
+        <p>Contact</p>
+      </div>
     </footer>
   </body>
 </html>
