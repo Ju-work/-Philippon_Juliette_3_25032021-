@@ -20,7 +20,6 @@
   font-family: 'shrikhand';
   font-size: xx-large;
   text-align: center;
-  width: auto;
   height: auto;
   display: flex;
   justify-content: center;
@@ -125,13 +124,14 @@ section {
     background: $primary;
     text-align: center;
     position: relative;
-    left: -55px;
+    left: -45px;
 
     span {
       position: relative;
       padding: 0;
-      bottom: 1px;
+      top: 1px;
       font-family: 'roboto_medium';
+      font-size: small;
     }
   }
 
@@ -156,7 +156,7 @@ section {
   .card {
     background: white;
     height: 250px;
-    width: 350px;
+    width: 100%;
     margin-bottom: 20px;
     border-radius: 20px;
     box-shadow: 10px 5px 10px rgb(192, 190, 190);
@@ -176,7 +176,7 @@ section {
     width: 80px;
     border-radius: 2px;
     position: relative;
-    left: 250px;
+    left: 220px;
     bottom: 230px;
     text-align: center;
   }
@@ -249,6 +249,7 @@ footer {
   top: -60px;
   padding: 20px 20px 50px 20px;
   margin-bottom: -60px;
+
   .restaurant_name {
     display: flex;
     align-items: center;
@@ -276,6 +277,7 @@ footer {
   border-radius: 20px;
   margin-bottom: 20px;
   box-shadow: 10px 5px 10px rgb(192, 190, 190);
+
   .meal_description {
     line-height: 10px;
     font-size: small;
@@ -293,8 +295,36 @@ footer {
 /*media queries******************************************************************/
 
 @media screen and (min-width: 1024px) {
+  header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+  .logo {
+    width: 50%;
+    display: flex;
+    justify-content: left;
+    margin-left: 20px;
+  }
+
+  .lieu {
+    width: 20%;
+    box-shadow: none;
+  }
+
   .btn {
     width: 30%;
+    margin-bottom: 50px;
+  }
+
+  .presentation {
+    width: 100%;
+
+    h1 {
+      font-size: xx-large;
+    }
   }
 
   section {
@@ -304,14 +334,29 @@ footer {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    padding-bottom: 60px;
 
     h2 {
       width: 100%;
+      font-size: xx-large;
       text-align: center;
       padding-bottom: 20px;
     }
     .ring {
       margin-left: 10px;
+    }
+  }
+  .restaurant {
+    display: flex;
+    flex-direction: row;
+    h3 {
+      width: 100%;
+      text-align: center;
+      font-size: xx-large;
+      padding-bottom: 20px;
+    }
+    .card {
+      width: 20%;
     }
   }
 
@@ -321,6 +366,7 @@ footer {
     flex-direction: row;
     flex-wrap: nowrap;
   }
+
   footer {
     max-width: 100%;
     padding: 20px;
@@ -335,6 +381,32 @@ footer {
       justify-content: space-between;
       p {
         padding-left: 70px;
+      }
+    }
+  }
+  /**************************** pages restaurants**********************************/
+  .banner {
+    max-width: 100%;
+    img {
+      height: 360px;
+    }
+  }
+  .restaurant_meal {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+  }
+}
+
+@media screen and (min-width: 500px) and (max-width: 1024px) {
+  .restaurant {
+    max-width: 100%;
+    .card {
+      width: 48%;
+      .new_frame {
+        left: 20px;
       }
     }
   }
