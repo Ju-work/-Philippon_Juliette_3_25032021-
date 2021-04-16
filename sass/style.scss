@@ -273,7 +273,7 @@ footer {
   justify-content: space-between;
   align-items: flex-end;
   background: white;
-  width: 300px;
+  width: 285px;
   padding: 0 10px 0 10px;
   border-radius: 20px;
   margin-bottom: 20px;
@@ -290,10 +290,6 @@ footer {
   .price {
     font-family: 'roboto_medium';
     padding-bottom: 10px;
-  }
-  .space {
-    width: 100%;
-    justify-content: center;
   }
 }
 
@@ -420,15 +416,10 @@ footer {
       justify-content: space-between;
     }
   }
-
-  .space {
-    width: 30%;
-    display: flex;
-    flex-direction: column;
-    align-self: flex-end;
-    position: relative;
-    top: 35px;
-    left: 130px;
+  .btn--commande {
+    margin-right: 15%;
+    margin-top: 13%;
+    width: 15%;
   }
 }
 
