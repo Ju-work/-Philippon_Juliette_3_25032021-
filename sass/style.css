@@ -11,6 +11,41 @@
   font-family: "shrikhand";
   src: url("/typo/Shrikhand-Regular.ttf") format("truetype");
 }
+.spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  animation-name: anim_spinner;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+.spinner span {
+  padding: 10px;
+  border-radius: 15px;
+}
+.spinner i {
+  color: #9356dc;
+}
+
+@keyframes anim_spinner {
+  0% {
+    z-index: 10;
+    opacity: 1;
+  }
+  85% {
+    z-index: 10;
+    opacity: 1;
+  }
+  100% {
+    z-index: -10;
+    opacity: 0;
+  }
+}
 .logo {
   background: white;
   font-family: "shrikhand";
@@ -21,6 +56,7 @@
   justify-content: center;
   padding-bottom: 5px;
   padding-top: 5px;
+  box-shadow: 0 1px 2px #9f9f9f;
 }
 
 .arrow {
@@ -36,8 +72,8 @@
   justify-content: center;
   text-align: center;
   padding: 5px;
-  background: #f2eafb;
-  box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.75) inset;
+  background-color: #eaeaea;
+  margin-top: 1px;
 }
 .lieu p {
   margin-left: 10px;
@@ -63,8 +99,7 @@
 }
 
 .btn {
-  background: #ff79da;
-  background: radial-gradient(circle, #ff79da 0%, #9356dc 67%);
+  background: linear-gradient(-195deg, #ff79da, #9356dc);
   width: 60%;
   align-self: center;
   color: white;
@@ -72,10 +107,15 @@
   text-align: center;
   border-radius: 25px;
   padding: 15px;
+  transform: scale(1);
+  transition: background-color 1s;
 }
 .btn--commande {
   padding: 10px;
   margin-top: 20px;
+}
+.btn:hover {
+  background-color: #df00a1;
 }
 
 section {
@@ -99,7 +139,12 @@ section h2 {
   box-shadow: 10px 5px 10px #c0bebe;
 }
 .bouton:hover {
-  background: #99e2d0;
+  background-color: #f5edff;
+  transition: all 500ms ease-in-out;
+}
+.bouton:hover .picto {
+  color: #9356dc;
+  transition: all 500ms ease-in-out;
 }
 .bouton .manual {
   position: relative;
@@ -185,8 +230,33 @@ section h2 {
   font-family: "roboto_thin";
   line-height: 1px;
 }
-.restaurant .heart {
+
+.heart {
   padding-right: 20px;
+}
+.heart .far.fa-heart {
+  position: relative;
+  left: 18px;
+  opacity: 1;
+  transition: opacity;
+}
+.heart .fas.fa-heart {
+  color: #9356dc;
+  background-clip: border-box;
+  transform: scale(0);
+  transition: transform 1s ease-in-out;
+}
+.heart:checked .fas.fa-heart {
+  color: #9356dc;
+}
+.heart:hover .far.fa-heart {
+  opacity: 0;
+  transition: opacity;
+  transition-delay: 1s;
+}
+.heart:hover .fas.fa-heart {
+  transform: scale(1);
+  transition: transform 1s ease-in-out;
 }
 
 footer {
@@ -267,6 +337,12 @@ footer p {
   border-radius: 20px;
   margin-bottom: 20px;
   box-shadow: 10px 5px 10px #c0bebe;
+  animation-name: anim_meal;
+  animation-duration: 1000ms;
+  animation-iteration-count: 1;
+  transform: translateY(10px);
+  opacity: 0;
+  animation-fill-mode: forwards;
 }
 .bouton_meal .meal_description {
   line-height: 10px;
@@ -418,6 +494,17 @@ footer p {
   }
   .restaurant .card .new_frame {
     left: 20px;
+  }
+}
+/* les keyframes */
+@keyframes anim_meal {
+  0% {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 
