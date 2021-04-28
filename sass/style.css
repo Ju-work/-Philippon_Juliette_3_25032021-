@@ -99,7 +99,8 @@
 }
 
 .btn {
-  background: linear-gradient(-195deg, #ff79da, #9356dc);
+  background: linear-gradient(45deg, #9356dc 23%, #ff79da 92%);
+  box-shadow: 0px 10px 13px -7px #9f9f9f;
   width: 60%;
   align-self: center;
   color: white;
@@ -108,14 +109,16 @@
   border-radius: 25px;
   padding: 15px;
   transform: scale(1);
-  transition: background-color 1s;
+  transition: transform 450ms, background-color 300ms, box-shadow 300ms;
 }
 .btn--commande {
   padding: 10px;
   margin-top: 20px;
 }
 .btn:hover {
-  background-color: #df00a1;
+  transform: scale(1.05);
+  background: #ff79da;
+  box-shadow: 0px 10px 13px -7px #5e5b5b;
 }
 
 section {
@@ -132,18 +135,15 @@ section h2 {
   font-family: "roboto_medium";
   display: flex;
   justify-content: space-evenly;
-  background: #e8f9f5;
+  background-color: #e8f9f5;
   padding: 20px;
   border-radius: 20px;
   margin-bottom: 20px;
-  box-shadow: 10px 5px 10px #c0bebe;
+  box-shadow: 0px 10px 13px -7px #9b9797;
 }
 .bouton:hover {
-  background-color: #f5edff;
-  transition: all 500ms ease-in-out;
-}
-.bouton:hover .picto {
-  color: #9356dc;
+  background-color: #fafdff;
+  box-shadow: 0px 10px 13px -7px #5e5b5b;
   transition: all 500ms ease-in-out;
 }
 .bouton .manual {
@@ -339,7 +339,6 @@ footer p {
   box-shadow: 10px 5px 10px #c0bebe;
   animation-name: anim_meal;
   animation-duration: 1000ms;
-  animation-iteration-count: 1;
   transform: translateY(10px);
   opacity: 0;
   animation-fill-mode: forwards;
@@ -347,6 +346,9 @@ footer p {
 .bouton_meal .meal_description {
   line-height: 10px;
   font-size: small;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .bouton_meal .meal_description span {
   font-family: "roboto_medium";
@@ -355,6 +357,19 @@ footer p {
 .bouton_meal .price {
   font-family: "roboto_medium";
   padding-bottom: 10px;
+}
+
+.selection_coche {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20%;
+  min-height: 100%;
+  border-radius: 20%;
+  background-color: #99e2d0;
+}
+.selection_coche .coche {
+  color: white;
 }
 
 /*media queries******************************************************************/
@@ -496,7 +511,7 @@ footer p {
     left: 20px;
   }
 }
-/* les keyframes */
+/* les keyframes et animations chargement de page*/
 @keyframes anim_meal {
   0% {
     transform: translateY(10px);
@@ -506,6 +521,15 @@ footer p {
     transform: translateY(0);
     opacity: 1;
   }
+}
+.order:nth-child(1) {
+  animation-delay: 1500ms;
+}
+.order:nth-child(2) {
+  animation-delay: 1900ms;
+}
+.order:nth-child(3) {
+  animation-delay: 2300ms;
 }
 
 /*# sourceMappingURL=style.css.map */
