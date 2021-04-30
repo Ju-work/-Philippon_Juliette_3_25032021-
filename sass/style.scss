@@ -361,6 +361,10 @@ footer {
   display: flex;
   align-items: center;
   padding-left: 20px;
+
+  .logo {
+    box-shadow: none;
+  }
 }
 .banner {
   width: 100%;
@@ -381,13 +385,51 @@ footer {
 
   .restaurant_name {
     display: flex;
+    align-self: flex-start;
     align-items: center;
+    margin-left: 10px;
     justify-content: space-between;
     font-family: 'shrikhand';
-    i {
-      font-size: x-large;
+
+    .big-heart {
+      margin-left: 20px;
+
+      .far.fa-heart {
+        font-size: x-large;
+        position: relative;
+        left: 25px;
+        opacity: 1;
+        transition: opacity;
+      }
+
+      .fas.fa-heart {
+        font-size: x-large;
+
+        color: $primary;
+        background-clip: border-box;
+
+        transform: scale(0);
+        transition: transform 1s ease-in-out;
+      }
+
+      &:checked .fas.fa-heart {
+        color: $primary;
+      }
+
+      &:hover .far.fa-heart {
+        opacity: 0;
+        transition: opacity;
+        transition-delay: 1s;
+      }
+
+      &:hover .fas.fa-heart {
+        transform: scale(1);
+
+        transition: transform 1s ease-in-out;
+      }
     }
   }
+
   .meal {
     font-family: 'roboto_thin';
     padding-bottom: 7px;
@@ -403,8 +445,9 @@ footer {
   align-items: flex-end;
   background: white;
   width: 285px;
-  padding: 0 10px 0 10px;
-  border-radius: 20px;
+  height: 60px;
+  padding: 0 0px 0 10px;
+  border-radius: 15px;
   margin-bottom: 20px;
   box-shadow: 10px 5px 10px rgb(192, 190, 190);
 
@@ -417,38 +460,42 @@ footer {
   animation-fill-mode: forwards;
 
   .meal_description {
-    line-height: 10px;
+    line-height: 20px;
     font-size: small;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 
     span {
+      display: flex;
       font-family: 'roboto_medium';
       font-size: medium;
+    }
+    p {
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
   }
 
   .price {
     font-family: 'roboto_medium';
-    padding-bottom: 10px;
+    padding-bottom: 8px;
+    margin-right: 20px;
+    padding-left: 20px;
   }
 }
 
-.selection_coche {
+.box {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  color: white;
 
-  width: 20%;
-  min-height: 100%;
-  border-radius: 20%;
+  width: 25%;
+  height: 100%;
+  border-radius: 0 15px 15px 0;
 
   background-color: $tertiary;
-
-  .coche {
-    color: white;
-  }
 }
 
 /*media queries******************************************************************/
