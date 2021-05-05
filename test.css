@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @font-face {
   font-family: 'roboto_thin';
   src: url('/typo/Roboto-Thin.ttf') format('truetype');
@@ -257,32 +256,148 @@ footer p {
   text-transform: uppercase;
 }
 
-.bouton_meal {
+.restaurant_meal .bouton_meal {
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  height: 3rem;
+  width: 90%;
+  margin: 0 auto 0.8rem auto;
+  border-radius: 10px;
+  box-shadow: 0px 2px 8px #9f9f9f;
+  animation-name: anim_menu;
+  animation-duration: 1000ms;
+  animation-iteration-count: 1;
+  transform: translateY(10px);
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+.restaurant_meal .bouton_meal span {
+  margin: 0;
+  font-size: 0.95rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.restaurant_meal .bouton_meal p {
+  margin: 0;
+  font-size: 0.75rem;
+  color: #4d4d4d;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.restaurant_meal .bouton_meal .meal_description {
+  padding: 0.5rem 0;
+  min-width: 80%;
+  transition: min-width 1000ms;
+}
+.restaurant_meal .bouton_meal .price {
+  padding-bottom: 0.4rem;
+  margin-top: auto;
+  font-weight: 600;
+  color: #454545;
+  text-align: center;
+  min-width: 20%;
+  transform: translateX(0%);
+  transition: min-width 1000ms;
+}
+.restaurant_meal .bouton_meal .box {
+  display: flex;
+  align-items: center;
+  min-width: 20%;
+  height: 100%;
+  background-color: #99e2d0;
+}
+
+.restaurant_meal .bouton_meal .box .coche {
+  color: white;
+  margin: auto;
+  transform: rotate(0deg);
+  transition: transform 1s 500ms;
+}
+
+.restaurant_meal .bouton_meal:hover .meal_description {
+  min-width: 60%;
+  transition: min-width 1s;
+}
+
+.restaurant_meal .bouton_meal:hover .coche {
+  transform: rotate(360deg);
+  transition: transform 1s;
+}
+
+@keyframes anim_menu {
+  0% {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+/*.bouton_meal {
   font-family: 'roboto_thin';
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   background: white;
-  width: 285px;
-  padding: 0 10px 0 10px;
-  border-radius: 20px;
+  width: 300px;
+  height: 60px;
+  padding: 0 0px 0 10px;
+  border-radius: 15px;
   margin-bottom: 20px;
-  box-shadow: 10px 5px 10px #c0bebe;
+  box-shadow: 10px 5px 10px rgb(192, 190, 190);
+
+  /* animation-name: anim_meal;
+  animation-duration: 1000ms;
+
+  transform: translateY(10px);
+  opacity: 0;
+
+  animation-fill-mode: forwards;
 }
+*/
+/*
 .bouton_meal .meal_description {
   line-height: 10px;
   font-size: small;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .bouton_meal .meal_description span {
+  display: flex;
+
   font-family: 'roboto_medium';
   font-size: medium;
 }
+.bouton_meal .meal_description p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .bouton_meal .price {
   font-family: 'roboto_medium';
   padding-bottom: 10px;
 }
 
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+
+  width: 25%;
+  height: 100%;
+  border-radius: 0 15px 15px 0;
+
+  background-color: green;
+}*/
+
 /*media queries******************************************************************/
+
 @media screen and (min-width: 1024px) {
   header {
     display: flex;

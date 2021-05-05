@@ -77,6 +77,7 @@ body {
   position: relative;
   z-index: 1;
 }
+
 .arrow {
   margin-right: 60px;
 }
@@ -98,7 +99,7 @@ body {
 }
 
 .presentation {
-  background: lighten($color: $tertiary, $amount: 20%);
+  background: #f6f6f6;
   display: flex;
   flex-direction: column;
   padding: 20px;
@@ -160,16 +161,20 @@ body {
     margin-top: 20px;
   }
 }
-
+.main_wrapper {
+  display: flex;
+  flex-direction: column;
+}
 section {
   display: flex;
   flex-direction: column;
-  padding: 20px 10px;
   align-items: center;
+  padding: 20px 10px;
 
   h2 {
     font-family: 'roboto_medium';
     font-size: x-large;
+    margin-right: 120px;
   }
 }
 
@@ -177,7 +182,7 @@ section {
   font-family: 'roboto_medium';
   display: flex;
   justify-content: space-evenly;
-  background-color: lighten($color: $tertiary, $amount: 20%);
+  background-color: #f6f6f6;
   padding: 20px;
   border-radius: 20px;
   margin-bottom: 20px;
@@ -230,11 +235,12 @@ section {
   }
 }
 .restaurant {
-  background: lighten($color: $tertiary, $amount: 20%);
+  background: #f6f6f6;
 
   h3 {
     font-family: 'roboto_medium';
     font-size: x-large;
+    margin-right: 170px;
   }
   .card {
     background: white;
@@ -376,7 +382,7 @@ footer {
   }
 }
 .restaurant_meal {
-  background: lighten($color: $tertiary, $amount: 20%);
+  background: #f6f6f6;
   border-radius: 40px 40px 0 0;
   position: relative;
   top: -60px;
@@ -385,7 +391,6 @@ footer {
 
   .restaurant_name {
     display: flex;
-    align-self: flex-start;
     align-items: center;
     margin-left: 10px;
     justify-content: space-between;
@@ -437,70 +442,98 @@ footer {
     border-bottom: 2px solid gray;
     text-transform: uppercase;
   }
-}
-.bouton_meal {
-  font-family: 'roboto_thin';
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  background: white;
-  width: 285px;
-  height: 60px;
-  padding: 0 0px 0 10px;
-  border-radius: 15px;
-  margin-bottom: 20px;
-  box-shadow: 10px 5px 10px rgb(192, 190, 190);
 
-  animation-name: anim_meal;
-  animation-duration: 1000ms;
-
-  transform: translateY(10px);
-  opacity: 0;
-
-  animation-fill-mode: forwards;
-
-  .meal_description {
-    line-height: 20px;
-    font-size: small;
-    white-space: nowrap;
+  .bouton_meal {
+    font-family: 'roboto_thin';
+    display: flex;
+    flex-direction: row;
     overflow: hidden;
-    text-overflow: ellipsis;
+    justify-content: space-between;
+    background: white;
+    width: 300px;
+    height: 60px;
+    padding: 0 0px 0 10px;
+    border-radius: 15px;
+    margin: 0 auto 15px auto;
+    box-shadow: 10px 5px 10px rgb(192, 190, 190);
+
+    animation-name: anim_meal;
+    animation-duration: 1000ms;
+    transform: translateY(10px);
+    opacity: 0;
+    animation-fill-mode: forwards;
+
+    .meal_description {
+      padding: 10px 0;
+      min-width: 80%;
+      transition: min-width 1000ms;
+
+      &:hover {
+        min-width: 60%;
+        transition: min-width 1s;
+      }
+    }
 
     span {
-      display: flex;
       font-family: 'roboto_medium';
       font-size: medium;
-    }
-    p {
+      margin: 0;
+      white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
     }
-  }
 
-  .price {
-    font-family: 'roboto_medium';
-    padding-bottom: 8px;
-    margin-right: 20px;
-    padding-left: 20px;
+    p {
+      margin: 0;
+      font-size: small;
+      color: #4d4d4d;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .price {
+      font-family: 'roboto_medium';
+      padding-bottom: 10px;
+      margin-top: auto;
+      font-weight: 600;
+      color: #454545;
+      text-align: center;
+      min-width: 20%;
+      transform: translateX(0%);
+      transition: min-width 1000ms;
+    }
+
+    .box {
+      display: flex;
+      align-items: center;
+      min-width: 20%;
+      height: 100%;
+      border-radius: 0 15px 15px 0;
+      background-color: $tertiary;
+
+      .coche {
+        color: white;
+        margin: auto;
+        transform: rotate(0deg);
+        transition: transform 1s 500ms;
+      }
+    }
   }
 }
-
-.box {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-
-  width: 25%;
-  height: 100%;
-  border-radius: 0 15px 15px 0;
-
-  background-color: $tertiary;
+.restaurant_meal .bouton_meal:hover .coche {
+  transform: rotate(360deg);
+  transition: transform 1s;
 }
 
 /*media queries******************************************************************/
 
 @media screen and (min-width: 1024px) {
+  .main_wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
   header {
     display: flex;
     flex-direction: row;
@@ -553,6 +586,7 @@ footer {
       margin-left: 10px;
     }
   }
+
   .restaurant {
     display: flex;
     flex-direction: row;
@@ -592,17 +626,34 @@ footer {
     }
   }
   /**************************** pages restaurants**********************************/
+  .band {
+    width: 100%;
+  }
+
   .banner {
-    max-width: 100%;
+    max-width: 40%;
     img {
-      height: 360px;
+      height: 100%;
     }
   }
+  .main_wrapper {
+    display: flex;
+    flex-direction: row;
+    /* height: 800px;*/
+    background-color: #e8f9f5;
+  }
+
   .restaurant_meal {
-    max-width: 100%;
+    position: relative;
+    top: 0;
+    left: -60px;
+    width: 120%;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
+    margin: 0;
+    padding: 20px 60px 60px 60px;
+    border-radius: 40px 0 0 40px;
 
     .restaurant_name {
       width: 100%;
@@ -656,13 +707,17 @@ footer {
 }
 
 .order {
-  &:nth-child(1) {
-    animation-delay: 1500ms;
-  }
-  &:nth-child(2) {
-    animation-delay: 1900ms;
-  }
-  &:nth-child(3) {
-    animation-delay: 2300ms;
+  .bouton_meal {
+    &:nth-child(2) {
+      animation-delay: 300ms;
+    }
+
+    &:nth-child(3) {
+      animation-delay: 700ms;
+    }
+
+    &:nth-child(4) {
+      animation-delay: 1100ms;
+    }
   }
 }
