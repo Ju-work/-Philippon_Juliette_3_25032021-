@@ -488,7 +488,7 @@ footer p {
   }
 
   .lieu {
-    width: 20%;
+    width: 19%;
     box-shadow: none;
   }
 
@@ -648,13 +648,13 @@ footer p {
     opacity: 1;
   }
 }
-.order .bouton_meal:nth-child(2) {
+.long_meal .bouton_meal:nth-child(2) {
   animation-delay: 300ms;
 }
-.order .bouton_meal:nth-child(3) {
+.long_meal .bouton_meal:nth-child(3) {
   animation-delay: 700ms;
 }
-.order .bouton_meal:nth-child(4) {
+.long_meal .bouton_meal:nth-child(4) {
   animation-delay: 1100ms;
 }
 
