@@ -161,7 +161,7 @@ body {
     margin-top: 20px;
   }
 }
-.main_wrapper {
+.main_wrapper_home {
   display: flex;
   flex-direction: column;
 }
@@ -397,12 +397,12 @@ footer {
     font-family: 'shrikhand';
 
     .big-heart {
-      margin-left: 20px;
+      margin-right: 25px;
 
       .far.fa-heart {
         font-size: x-large;
         position: relative;
-        left: 25px;
+        left: 24px;
         opacity: 1;
         transition: opacity;
       }
@@ -529,17 +529,11 @@ footer {
 /*media queries******************************************************************/
 
 @media screen and (min-width: 1024px) {
-  .main_wrapper {
-    display: flex;
-    flex-direction: column;
-  }
-
   header {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-bottom: 30px;
   }
   .logo {
     width: 76%;
@@ -598,6 +592,10 @@ footer {
     }
     .card {
       width: 20%;
+    }
+    .new_frame {
+      position: relative;
+      left: 20px;
     }
   }
 
@@ -664,6 +662,13 @@ footer {
       }
       i {
         margin-left: 30px;
+      }
+    }
+    .big-heart {
+      display: flex;
+      .fas.fa-heart {
+        position: relative;
+        right: 29px;
       }
     }
 

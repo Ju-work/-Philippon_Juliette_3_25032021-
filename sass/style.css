@@ -141,7 +141,7 @@ body {
   margin-top: 20px;
 }
 
-.main_wrapper {
+.main_wrapper_home {
   display: flex;
   flex-direction: column;
 }
@@ -360,12 +360,12 @@ footer p {
   font-family: "shrikhand";
 }
 .restaurant_meal .restaurant_name .big-heart {
-  margin-left: 20px;
+  margin-right: 25px;
 }
 .restaurant_meal .restaurant_name .big-heart .far.fa-heart {
   font-size: x-large;
   position: relative;
-  left: 25px;
+  left: 24px;
   opacity: 1;
   transition: opacity;
 }
@@ -472,17 +472,11 @@ footer p {
 
 /*media queries******************************************************************/
 @media screen and (min-width: 1024px) {
-  .main_wrapper {
-    display: flex;
-    flex-direction: column;
-  }
-
   header {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-bottom: 30px;
   }
 
   .logo {
@@ -541,6 +535,10 @@ footer p {
   }
   .restaurant .card {
     width: 20%;
+  }
+  .restaurant .new_frame {
+    position: relative;
+    left: 20px;
   }
 
   .bouton {
@@ -608,6 +606,13 @@ footer p {
   }
   .restaurant_meal .restaurant_name i {
     margin-left: 30px;
+  }
+  .restaurant_meal .big-heart {
+    display: flex;
+  }
+  .restaurant_meal .big-heart .fas.fa-heart {
+    position: relative;
+    right: 29px;
   }
   .restaurant_meal .long_meal {
     display: flex;
