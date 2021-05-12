@@ -580,7 +580,6 @@ footer p {
   .main_wrapper {
     display: flex;
     flex-direction: row;
-    /* height: 800px;*/
     background-color: #e8f9f5;
   }
 
