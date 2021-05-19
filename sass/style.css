@@ -1,15 +1,15 @@
 @charset "UTF-8";
 @font-face {
   font-family: "roboto_thin";
-  src: url("/typo/Roboto-Thin.ttf") format("truetype");
+  src: url("../typo/Roboto-Thin.ttf") format("truetype");
 }
 @font-face {
   font-family: "roboto_medium";
-  src: url("/typo/Roboto-Medium.ttf") format("truetype");
+  src: url("../typo/Roboto-Medium.ttf") format("truetype");
 }
 @font-face {
   font-family: "shrikhand";
-  src: url("/typo/Shrikhand-Regular.ttf") format("truetype");
+  src: url("../typo/Shrikhand-Regular.ttf") format("truetype");
 }
 body {
   margin: 0;
